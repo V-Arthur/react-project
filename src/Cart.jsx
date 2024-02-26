@@ -17,10 +17,8 @@ export default function Cart({ cart }) {
   function handleFormSubmit(event) {
     event.preventDefault();
 
-    var test = "price_1OmMZaLosaW8FnUw3gnZwRey";
-
     const lineItems = cart.map((product) => {
-      return { price: 'price_1OmMZaLosaW8FnUw3gnZwRey', quantity: product.quantity };
+      return { price: product.price_id, quantity: product.quantity };
     });
 
     stripeLoadedPromise.then((stripe) => {
