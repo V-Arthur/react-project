@@ -20,7 +20,7 @@ export default function Cart({ cart }) {
     var test = "price_1OmMZaLosaW8FnUw3gnZwRey";
 
     const lineItems = cart.map((product) => {
-      return { price: product.test, quantity: product.quantity };
+      return { price: 'price_1OmMZaLosaW8FnUw3gnZwRey', quantity: product.quantity };
     });
 
     stripeLoadedPromise.then((stripe) => {
