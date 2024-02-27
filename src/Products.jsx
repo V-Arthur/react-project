@@ -11,7 +11,7 @@ export default function Products(props) {
   );
 
   useEffect(() => {
-    get("public/supermarket.json")
+    get("supermarket.json")
       .then((data) => {
         setProducts(data);
       })
