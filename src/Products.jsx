@@ -6,11 +6,12 @@ import Loader from "./Loader";
 export default function Products(props) {
   const [products, setProducts] = useState([]);
   const { get, loading } = useFetch(
-    "https://react-tutorial-demo.firebaseio.com/"
+    // "https://react-tutorial-demo.firebaseio.com/"
+    "https://main--mellifluous-dolphin-009d9a.netlify.app/"
   );
 
   useEffect(() => {
-    get("supermarket.json")
+    get("public/supermarket.json")
       .then((data) => {
         setProducts(data);
       })
